@@ -1,0 +1,16 @@
+.bg-color {
+  width: 500px;
+  height: 400px;
+  border: 2px solid blue;
+  background-image: url(/pexels-pixabay-210237.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-img {
+  margin: 30px 0 0 0;
+  height: 300px;
+  width: 300px;
+  background-color: brown;
+  border: 10px solid red;
+}
