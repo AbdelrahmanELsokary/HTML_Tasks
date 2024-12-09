@@ -1,60 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Notebook</title>
-<link rel="stylesheet" href="indx.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notebook</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
-<h1>My Notebook</h1>
-<input type="text" placeholder="title..."autofocus >
-
-<textarea id="note" placeholder="Write your note here..." style="width: 100%; height: 200px;" ></textarea><br>
-
-<pre>                                    <button onclick="saveNote()">Save Note</button></pre>
-<pre>                                    <button onclick="clearNote()">Clear Note</button></pre>
-</pre>
-<ul id="savedNotes"></ul>
-
-<script>
-function saveNote() {
-let noteText = document.getElementById("note").value.trim();
-    if (noteText !== "") {                                                                     
-        let li = document.createElement("li");
-        li.textContent = noteText;
-        
-        let editButton = document.createElement("button");
-        editButton.textContent = "Edit";
-        editButton.onclick = function() {
-            let newText = prompt("Enter new text for the note:", li.textContent);
-            if (newText !== null) {
-                li.textContent = newText;
-            }
-        };
-        
-        let clearButton = document.createElement("button");
-        clearButton.textContent = "Clear";
-        clearButton.onclick = function() {
-            li.remove();
-        };
-        
-        li.appendChild(editButton);
-        li.appendChild(clearButton);
-        
-        document.getElementById("savedNotes").appendChild(li);
-        document.getElementById("note").value = "";
-    } else {
-        alert("Please write something in the note!");
-    }
-}
-
-function clearNote() {
-    document.getElementById("note").value = "";
-}
-</script>
-
+    <h1>My Notebook</h1>
+    <input type="text" placeholder="title..." autofocus>
+    <textarea id="note" placeholder="Write your note here..." style="width: 100%; height: 200px;"></textarea><br>
+    <pre>                                    <button onclick="saveNote()">Save Note</button></pre>
+    <pre>                                    <button onclick="clearNote()">Clear Note</button></pre>
+    </pre>
+    <ul id="savedNotes"></ul>
 </body>
 </html>

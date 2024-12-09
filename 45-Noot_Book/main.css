@@ -1,15 +1,7 @@
-input {
-  padding: 5px;
-  margin: 5px;
-  border-radius: 7px;
-  background-color: #f1e3c3;
-  width: 98%;
-}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #073d0a;
 }
 body {
   font-family: "Cairo", sans-serif;
@@ -19,6 +11,13 @@ body {
 h1 {
   text-align: center;
   color: #ddd;
+}
+input {
+  border-radius: 7px;
+  background-color: #f1e3c3;
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
 }
 textarea {
   background-color: #f1e3c3;
